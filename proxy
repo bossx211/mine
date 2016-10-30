@@ -1,0 +1,31 @@
+#!/bin/bash
+sudo apt-get update
+sudo apt-get dist-upgrade -y
+sudo apt-get install -y git
+sudo apt-get install -y curl
+sudo apt-get install -y unzip
+sudo apt-get install -y gedit
+sudo apt-get install -y automake
+sudo apt-get install -y autoconf
+sudo apt-get install -y dh-autoreconf
+sudo apt-get install -y build-essential
+sudo apt-get install -y pkg-config
+sudo apt-get install -y openssh-server
+sudo apt-get install -y screen
+sudo apt-get install -y libtool
+sudo apt-get install -y libcurl4-openssl-dev
+sudo apt-get install -y libtool libncurses5-dev
+sudo apt-get install -y libudev-dev
+sudo apt-get install -y python-dev
+cd ~
+sudo git clone https://github.com/Optiminer/cpuminer-xzc/
+cd ~/cpuminer-xzc/
+sudo ./build.sh
+sudo ./configure CFLAGS="-march=native"
+make
+sudo make install
+cd ~
+sudo git clone git://github.com/slush0/stratum-mining-proxy.git
+cd stratum-mining-proxy
+sudo python distribute_setup.py
+sudo python setup.py develop
