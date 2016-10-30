@@ -1,5 +1,3 @@
-#!/bin/bash
-#/etc/init.d/mine
 ### BEGIN INIT INFO
 # Provides:          mine
 # Required-Start:    $remote_fs $syslog
@@ -9,5 +7,5 @@
 # Short-Description: Start miner at boot time
 # Description:       Enable service provided by daemon.
 ### END INIT INFO
-
+#!/bin/bash
 sudo cpuminer -a lyra2rev2 -o stratum+tcp://45.63.93.186:5595 --cpu-priority 5 -B
